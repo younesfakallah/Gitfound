@@ -1,6 +1,7 @@
 body {
     background: url(../img/background.jfif);
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .card-body {
