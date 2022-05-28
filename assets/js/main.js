@@ -44,8 +44,3 @@ input.addEventListener('change', (e) => {
          </div>`
     })
 })
-
-
-/*fetch("https://api.github.com/users/younesfakallah")
-    .then(reponse => reponse.json())
-    .then(correctResponse => console.log(correctResponse.name))*/
