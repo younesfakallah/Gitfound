@@ -1,25 +1,13 @@
 body {
-<<<<<<< HEAD
     background: #4259CA;
-=======
-    background: url(../img/background.jfif);
-    background-size: cover;
-    background-repeat: no-repeat;
->>>>>>> cff4eea08dd6a4e239fe7c9cd34e99aaa0fe9b8c
+}
+
+.input-place {
+    margin: 3rem 0;
 }
 
 .card-body {
-    height: 100%;
-}
-
-.card-title {
-    font-size: 2rem;
-}
-
-.card-text {
-    font-size: 1.5rem;
-    padding: 10% 0;
-    height: 100%;
+    text-align: center;
 }
 
 a {

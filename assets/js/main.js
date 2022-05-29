@@ -25,22 +25,18 @@ input.addEventListener('change', (e) => {
     fetch(`https://api.github.com/users/${input.value}`)
     .then(data=> data.json())
     .then((jsonData) => {
+        console.table(jsonData)
         if(jsonData.repos_url.length > 0) {
             requestRepo(jsonData.repos_url, input.value)
         }
         container.innerHTML = 
-        `<div class="card mb-3" style="max-width: 100%;">
-            <div class="row g-0">
-                <div class="col-md-4">
-                    <img src="${jsonData.avatar_url}" class="img-fluid rounded-start" alt="Photo de profil github">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">${jsonData.name}</h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
+         `<div class="card" style="width: 18rem;">
+            <img src="${jsonData.avatar_url}" class="card-img-top" alt="Photo de profil github">
+            <div class="card-body">
+                <h5 class="card-title">${jsonData.name}</h5>
+                <p class="card-text"></p>
+                <a target="_BLANK" href="https://github.com/${input.value}" class="btn btn-primary">Voir son profil</a>
             </div>
-         </div>`
+          </div>`
     })
 })
