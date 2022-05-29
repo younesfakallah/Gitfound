@@ -1,5 +1,11 @@
 body {
+<<<<<<< HEAD
     background: #4259CA;
+=======
+    background: url(../img/background.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+>>>>>>> cff4eea08dd6a4e239fe7c9cd34e99aaa0fe9b8c
 }
 
 .card-body {
