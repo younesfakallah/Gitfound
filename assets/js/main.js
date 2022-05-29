@@ -9,7 +9,7 @@ const requestRepo = (url, gitname) => {
             let checkSize = 0;
             let projectName;
             for(let i=0; i < jsonRepo.length; i++) {
-                if(jsonRepo[i].size > checkSize) {
+                if(jsonRepo[i].size > checkSize && jsonRepo[i].fork === false) {
                     checkSize = jsonRepo[i].size
                     projectName = jsonRepo[i].name
                 }
@@ -25,7 +25,6 @@ input.addEventListener('change', (e) => {
     fetch(`https://api.github.com/users/${input.value}`)
     .then(data=> data.json())
     .then((jsonData) => {
-        console.table(jsonData)
         if(jsonData.repos_url.length > 0) {
             requestRepo(jsonData.repos_url, input.value)
         }
