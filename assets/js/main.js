@@ -7,6 +7,7 @@ $('.close-ico').hide();
 $('.about-ico').on('click', function(e) {
     e.preventDefault();
     $('.expliquation').show();
+    $('.about-ico').hide();
     $('.close-ico').show();
 })
 
@@ -14,6 +15,7 @@ $('.close-ico').on('click', function(e) {
     e.preventDefault();
     $('.expliquation').hide();
     $('.close-ico').hide();
+    $('.about-ico').show();
 })
 
 const requestRepo = (url, gitname) => {
