@@ -44,13 +44,14 @@ a {
 
 .expliquation {
     position: absolute;
-    margin: 15rem 0 0 0;
+    margin: 14.3rem 0 0 0;
     max-width: 30rem;
 }
 
 .texte {
     position: absolute;
     text-align: center;
+    font-size: .9rem;
     color: #fff;
     background-color: #4259ca;
     padding: 2rem;
