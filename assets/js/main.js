@@ -1,6 +1,21 @@
 const input = document.querySelector('.form-control')
 const container = document.querySelector('.card-content')
 
+$('.expliquation').hide();
+$('.close-ico').hide();
+
+$('.about-ico').on('click', function(e) {
+    e.preventDefault();
+    $('.expliquation').show();
+    $('.close-ico').show();
+})
+
+$('.close-ico').on('click', function(e) {
+    e.preventDefault();
+    $('.expliquation').hide();
+    $('.close-ico').hide();
+})
+
 const requestRepo = (url, gitname) => {
     fetch(url)
         .then(repoData=> repoData.json())
@@ -14,7 +29,7 @@ const requestRepo = (url, gitname) => {
                     projectName = jsonRepo[i].name
                 }
             }
-            repoList.innerHTML = `Son plus gros projet public est <a target="_BLANK" href="https://github.com/${gitname}/${projectName}"><strong>${projectName}</strong></a>`
+            repoList.innerHTML += `Son plus gros projet public est <a target="_BLANK" href="https://github.com/${gitname}/${projectName}"><strong>${projectName}</strong></a>`
             
         })
 }
@@ -28,7 +43,7 @@ input.addEventListener('change', (e) => {
         if(jsonData.repos_url.length > 0) {
             requestRepo(jsonData.repos_url, input.value)
         }
-        container.innerHTML = 
+        container.innerHTML += 
          `<div class="card" style="width: 18rem;">
             <img src="${jsonData.avatar_url}" class="card-img-top" alt="Photo de profil github">
             <div class="card-body">

@@ -2,8 +2,16 @@ body {
     background: #4259CA;
 }
 
+html, body, main {
+    height: 100%;
+}
+
 .input-place {
     padding: 2rem 0;
+}
+
+.card-content {
+    gap: 1rem;
 }
 
 .card-body {
@@ -14,4 +22,36 @@ a {
   text-decoration: none;
   color: inherit;
   outline: 0;
+}
+
+.about {
+    font-size: 2rem;
+    margin: 1rem 0 0 0;
+    gap: 1rem;
+}
+
+.about-ico {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 100vw;
+}
+
+.close-ico {
+    background-color: rgb(231, 12, 12);
+    padding: 1rem 2rem;
+    border-radius: 100vw;
+}
+
+.expliquation {
+    position: absolute;
+    margin: 15rem 0 0 0;
+    max-width: 30rem;
+}
+
+.texte {
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    background-color: #4259ca;
+    padding: 2rem;
 }
