@@ -45,7 +45,7 @@ input.addEventListener('change', (e) => {
         if(jsonData.repos_url.length > 0) {
             requestRepo(jsonData.repos_url, input.value)
         }
-        container.innerHTML += 
+        container.innerHTML = 
          `<div class="card" style="width: 15rem;">
             <img src="${jsonData.avatar_url}" class="card-img-top" alt="Photo de profil github">
             <div class="card-body">
